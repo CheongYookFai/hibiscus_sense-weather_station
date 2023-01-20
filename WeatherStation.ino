@@ -58,7 +58,7 @@ struct Encoder {
 } encoder;
 
 struct Button {
-  const uint8_t pin = 0;
+  const uint8_t pin = 32;
   bool currentState;
   bool previouState = HIGH;
   bool isHolding = false;
@@ -79,13 +79,13 @@ LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 20, 4);
 bool isSDAvailable = false;
 
 //Wifi Config
-const char* ssid = "TitanicSyncing";
-const char* password = "cheongyf";
+const char* ssid = "network_ssid";
+const char* password = "network_pass";
 const int network_timeout = 5000;
 
 //Favoriot
-#define API_ACCESS_TOKEN "BGXNsEtJsB0roistgClyxeVC1SyHioZe"
-#define DEV_ID "HibiscusSense@CHEONGYOOKFAI"
+#define API_ACCESS_TOKEN "access_token"
+#define DEV_ID "device@username"
 
 //Time Servers
 const char* ntpServer1 = "pool.ntp.org";
