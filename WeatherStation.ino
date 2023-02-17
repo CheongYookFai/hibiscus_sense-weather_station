@@ -236,7 +236,7 @@ void SensorInit() {
     Serial.println("Failed to find BH1750");
   } else {
     Serial.println("BH1750 initialized");
-    sensorChecks--;
+    if (!systemInitialized) sensorChecks--;
   }
 
   //Rain SensorInit Rain
